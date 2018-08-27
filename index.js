@@ -30,7 +30,6 @@ function addToCart(item) {
 
 }
 function viewCart() {
-  
   var count= cart.length;
   var string = "In your cart, you have "
   var itemName;
@@ -56,7 +55,6 @@ function viewCart() {
   }return string + ".";
 }
 
-
 function total() {
   var itemTotal = 0;
   var itemPrice = []
@@ -64,17 +62,12 @@ function total() {
     itemPrice = Object.values(cart[i])
     itemTotal += parseInt(itemPrice.splice(1))
 
-
   }return itemTotal;
-
-
 }
-
 
 function removeFromCart(item) {
   for(var i = 0; i < cart.length; i++){
     if(item === cart[i].itemName){
-      //var ret =
       return cart.splice(i,1)
     }
     }
